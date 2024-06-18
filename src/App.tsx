@@ -35,32 +35,37 @@ export const App = () => (
             </TabsList>
 
 
-            <Cell
-                Component="label"
-                before={<Radio name="radio" value="1"/>}
-                description="Pass Component='label' to Cell to make it clickable."
-                multiline
-            >
+            <Section>
+                <Cell
+                    Component="label"
+                    before={<Radio name="radio" value="1"/>}
+                    description="Pass Component='label' to Cell to make it clickable."
+                    multiline
+                >
+                    First radio
+                </Cell>
+                <Cell
+                    Component="label"
+                    before={<Radio name="radio" value="2"/>}
+                    description="Pass Component='label' to Cell to make it clickable."
+                    multiline
+                >
+                    Second radio
+                </Cell>
+            </Section>
+                       
+            <Section footer="Pass Component='label' to Cell to make it clickable.">
+                <Cell
+                    Component="label"
+                    after={<Switch defaultChecked />}
+                >
                 First radio
-            </Cell>
-            <Cell
-                Component="label"
-                before={<Radio name="radio" value="2"/>}
-                description="Pass Component='label' to Cell to make it clickable."
-                multiline
-            >
-                Second radio
-            </Cell>
+                </Cell>
+            </Section>
+                
 
 
-            <Cell
-                Component="label"
-                after={<Switch defaultChecked />}
-                description="Pass Component='label' to Cell to make it clickable."
-                multiline
-            >
-                First radio
-            </Cell>
+           
 
             <Steps
                 count={3}
