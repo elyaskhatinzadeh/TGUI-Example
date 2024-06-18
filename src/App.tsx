@@ -2,7 +2,8 @@ import React, {useState} from 'react';
 
 import {
     Accordion,
-    AppRoot, Blockquote,
+    AppRoot,
+    Blockquote,
     Cell,
     Input,
     List,
@@ -30,6 +31,14 @@ import {
     AccordionContent
 } from "@xelene/tgui/dist/components/Blocks/Accordion/components/AccordionContent/AccordionContent";
 import {Icon20Copy} from "@xelene/tgui/dist/icons/20/copy";
+import {Icon20QuestionMark} from "@xelene/tgui/dist/icons/20/question_mark";
+import {Icon24Channel} from "@xelene/tgui/dist/icons/24/channel";
+import {Icon16Cancel} from "@xelene/tgui/dist/icons/16/cancel";
+import {Icon24Cancel} from "@xelene/tgui/dist/icons/24/cancel";
+import {Icon28Close} from "@xelene/tgui/dist/icons/28/close";
+import {Icon28CloseAmbient} from "@xelene/tgui/dist/icons/28/close_ambient";
+import {Icon36Backspace} from "@xelene/tgui/dist/icons/36/backspace";
+import {Icon28Edit} from "@xelene/tgui/dist/icons/28/edit";
 
 export const App = () => {
     const [drop, setDrop] = useState(false)
@@ -122,26 +131,15 @@ export const App = () => {
                 </Section>
 
                 <Section>
-                    <Input before={<Icon20Copy />} placeholder="Title"/>
-                    <Input header="Button url" placeholder="Url"/>
+
 
                     <Accordion onChange={() => setDrop(prevState => !prevState)} expanded={drop}>
-                        <AccordionSummary after={<Icon20Copy/>}>
+                        <AccordionSummary before={<Icon28Edit/>}>
                             Link title
                         </AccordionSummary>
                         <AccordionContent>
-                            <div
-                                style={{
-                                    padding: '10px 20px 20px'
-                                }}
-                            >
-                                <Blockquote>
-                                    The accordion's basic form is believed to have been invented in Berlin, in 1822, by
-                                    Christian Friedrich Ludwig Buschmann, although one instrument was discovered in 2006
-                                    that appears to have been built earlier. The earliest history of the accordion in
-                                    Russia is poorly documented.
-                                </Blockquote>
-                            </div>
+                            <Input placeholder="Title" status="error"/>
+                            <Input placeholder="Url"/>
                         </AccordionContent>
                     </Accordion>
 
@@ -151,6 +149,27 @@ export const App = () => {
                 </Section>
 
 
+
+                <Section>
+
+                    <Blockquote>
+                        <Icon20QuestionMark />
+                        <Icon20Copy />
+                        <Icon24Channel />
+                        <Icon16Cancel />
+                        <Icon24Cancel />
+                        <Icon32ProfileColoredSquare />
+                        <Icon28Close />
+                        <Icon28CloseAmbient />
+                        <Icon36Backspace />
+                        <Icon28Edit  />
+                        The accordion's basic form is believed to have been invented in Berlin, in 1822, by
+                        Christian Friedrich Ludwig Buschmann, although one instrument was discovered in 2006
+                        that appears to have been built earlier. The earliest history of the accordion in
+                        Russia is poorly documented.
+                    </Blockquote>
+
+                </Section>
                 <CellSection/>
                 <FormSection/>
                 <BannerSection/>
