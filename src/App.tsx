@@ -126,7 +126,7 @@ export const App = () => {
                     <Input header="Button url" placeholder="Url"/>
 
                     <Accordion onChange={() => setDrop(prevState => !prevState)} expanded={drop}>
-                        <AccordionSummary before={<Icon20Copy/>}>
+                        <AccordionSummary after={<Icon20Copy/>}>
                             Link title
                         </AccordionSummary>
                         <AccordionContent>
