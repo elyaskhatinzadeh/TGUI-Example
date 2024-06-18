@@ -3,7 +3,6 @@ import React, {useState} from 'react';
 import {
     Accordion,
     AppRoot, Blockquote,
-    Button,
     Cell,
     Input,
     List,
@@ -30,6 +29,7 @@ import {
 import {
     AccordionContent
 } from "@xelene/tgui/dist/components/Blocks/Accordion/components/AccordionContent/AccordionContent";
+import {Icon20Copy} from "@xelene/tgui/dist/icons/20/copy";
 
 export const App = () => {
     const [drop, setDrop] = useState(false)
@@ -122,9 +122,8 @@ export const App = () => {
                 </Section>
 
                 <Section>
-                    <Input header="Button title" placeholder="Title"/>
+                    <Input before={<Icon20Copy />} placeholder="Title"/>
                     <Input header="Button url" placeholder="Url"/>
-                    <Button size="l" stretched>Save</Button>
 
                     <Accordion onChange={() => setDrop(prevState => !prevState)} expanded={drop}>
                         <AccordionSummary>
@@ -146,6 +145,9 @@ export const App = () => {
                         </AccordionContent>
                     </Accordion>
 
+                    <ButtonCell onClick={() => console.log('a')} before={<Icon28AddCircle/>}>
+                        Create Ad
+                    </ButtonCell>
                 </Section>
 
 
