@@ -1,6 +1,6 @@
 import React from 'react';
 
-import {AppRoot, Cell, List, Radio, Section, Selectable, Steps, Switch, TabsList} from '@xelene/tgui';
+import {AppRoot, Button, Cell, Input, List, Radio, Section, Selectable, Steps, Switch, TabsList} from '@xelene/tgui';
 import { CellSection } from './components/CellSection';
 import { FormSection } from './components/FormSection/FormSection';
 import { BannerSection } from './components/BannerSection';
@@ -53,7 +53,7 @@ export const App = () => (
                     Second radio
                 </Cell>
             </Section>
-                       
+
             <Section footer="Pass Component='label' to Cell to make it clickable.">
                 <Cell
                     Component="label"
@@ -62,10 +62,10 @@ export const App = () => (
                 First radio
                 </Cell>
             </Section>
-                
 
 
-           
+
+
 
             <Steps
                 count={3}
@@ -96,6 +96,12 @@ export const App = () => (
                 <ButtonCell onClick={() => console.log('a')} before={<Icon28AddCircle />}>
                     Create Ad
                 </ButtonCell>
+            </Section>
+
+            <Section>
+                <Input header="Button title" placeholder="Title" />
+                <Input header="Button url" placeholder="Url" />
+                <Button size="l" stretched>Save</Button>
             </Section>
 
             <CellSection />
