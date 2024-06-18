@@ -1,6 +1,6 @@
 import React from 'react';
 
-import {AppRoot, Cell, List, PinInput, Radio, Section, Selectable, Steps, Switch, TabsList} from '@xelene/tgui';
+import {AppRoot, Cell, List, Radio, Section, Selectable, Steps, Switch, TabsList} from '@xelene/tgui';
 import { CellSection } from './components/CellSection';
 import { FormSection } from './components/FormSection/FormSection';
 import { BannerSection } from './components/BannerSection';
@@ -15,10 +15,6 @@ import {TabsItem} from "@xelene/tgui/dist/components/Navigation/TabsList/compone
 export const App = () => (
     <AppRoot>
         <List>
-
-            <PinInput
-                pinCount={6}
-                label="Enter your pin" />
             <TabsList>
                 <TabsItem
                     onClick={function noRefCheck(){}}
