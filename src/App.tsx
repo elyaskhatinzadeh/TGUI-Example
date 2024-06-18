@@ -1,6 +1,6 @@
 import React from 'react';
 
-import {AppRoot, Cell, List, Section, Selectable, Steps, TabsList} from '@xelene/tgui';
+import {AppRoot, Cell, List, PinInput, Radio, Section, Selectable, Steps, Switch, TabsList} from '@xelene/tgui';
 import { CellSection } from './components/CellSection';
 import { FormSection } from './components/FormSection/FormSection';
 import { BannerSection } from './components/BannerSection';
@@ -14,13 +14,11 @@ import {TabsItem} from "@xelene/tgui/dist/components/Navigation/TabsList/compone
 
 export const App = () => (
     <AppRoot>
-        <List
-            style={{
-                background: 'var(--tgui--secondary_bg_color)',
-                padding: 10
-            }}
-        >
+        <List>
 
+            <PinInput
+                pinCount={6}
+                label="Enter your pin" />
             <TabsList>
                 <TabsItem
                     onClick={function noRefCheck(){}}
@@ -39,6 +37,34 @@ export const App = () => (
                     Label 3
                 </TabsItem>
             </TabsList>
+
+
+            <Cell
+                Component="label"
+                before={<Radio name="radio" value="1"/>}
+                description="Pass Component='label' to Cell to make it clickable."
+                multiline
+            >
+                First radio
+            </Cell>
+            <Cell
+                Component="label"
+                before={<Radio name="radio" value="2"/>}
+                description="Pass Component='label' to Cell to make it clickable."
+                multiline
+            >
+                Second radio
+            </Cell>
+
+
+            <Cell
+                Component="label"
+                after={<Switch defaultChecked />}
+                description="Pass Component='label' to Cell to make it clickable."
+                multiline
+            >
+                First radio
+            </Cell>
 
             <Steps
                 count={3}
