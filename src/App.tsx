@@ -9,6 +9,7 @@ import {
     List,
     Radio,
     Section,
+    Select,
     Selectable,
     Steps,
     Switch,
@@ -148,7 +149,27 @@ export const App = () => {
                     </ButtonCell>
                 </Section>
 
+<Section
+                header='Application Launch Data'
+                footer='These pages help developer to learn more about current launch information'
+            >
+                    <Cell
+                        after={<>
+                            <Select before={<>a</>}>
+                                <option>Hello</option>
+                                <option>Okay</option>
+                            </Select>
+                        </>}
+                        subtitle='User data, chat information, technical data'>Select lang</Cell>
+            </Section>
 
+
+            <Section
+                header='Application Launch Data'
+                footer='These pages help developer to learn more about current launch information'
+            >
+                <Input placeholder='ok' />
+            </Section>
 
                 <Section>
 
