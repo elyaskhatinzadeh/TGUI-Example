@@ -7,14 +7,14 @@ import {
     Cell,
     Input,
     List,
-    Radio,
+    Radio, Rating,
     Section,
-    Select,
     Selectable,
     Steps,
     Switch,
     TabsList
 } from '@xelene/tgui';
+
 import { CellSection } from './components/CellSection';
 import { FormSection } from './components/FormSection/FormSection';
 import { BannerSection } from './components/BannerSection';
@@ -40,6 +40,7 @@ import {Icon28Close} from "@xelene/tgui/dist/icons/28/close";
 import {Icon28CloseAmbient} from "@xelene/tgui/dist/icons/28/close_ambient";
 import {Icon36Backspace} from "@xelene/tgui/dist/icons/36/backspace";
 import {Icon28Edit} from "@xelene/tgui/dist/icons/28/edit";
+import {Select} from "@xelene/tgui/dist/components/Form/Select/Select";
 
 export const App = () => {
     const [drop, setDrop] = useState(false)
@@ -149,10 +150,11 @@ export const App = () => {
                     </ButtonCell>
                 </Section>
 
-<Section
-                header='Application Launch Data'
-                footer='These pages help developer to learn more about current launch information'
-            >
+                <Section
+                    header='Application Launch Data'
+                    footer='These pages help developer to learn more about current launch information'
+                >
+                    <Rating />
                     <Cell
                         after={<>
                             <Select before={<>a</>}>
@@ -161,15 +163,15 @@ export const App = () => {
                             </Select>
                         </>}
                         subtitle='User data, chat information, technical data'>Select lang</Cell>
-            </Section>
+                </Section>
 
 
-            <Section
-                header='Application Launch Data'
-                footer='These pages help developer to learn more about current launch information'
-            >
-                <Input placeholder='ok' />
-            </Section>
+                <Section
+                    header='Application Launch Data'
+                    footer='These pages help developer to learn more about current launch information'
+                >
+                    <Input placeholder='ok' />
+                </Section>
 
                 <Section>
 
